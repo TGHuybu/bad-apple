@@ -9,12 +9,13 @@ import sys
 from PIL import Image
 
 def main():
-    PIXELS = [' ', '.', '%', '#']   # Change the PIXELS mapping to increase/decrease details
+    PIXELS = [' ', '.', '`', '^', '*', ':', ';', '%', '$', '&', '@', '#']   # Change the PIXELS mapping to increase/decrease details
+    # PIXELS.reverse()    # Flip brightness mapping
 
     video = cv2.VideoCapture("bad_apple.mp4")
 
     scale = 0.43    # Pixel scale (depends on terminal font)
-    columns = 80    # Width of the rendered frame
+    columns = 50    # Width of the rendered frame
 
     while True:
         ret, frame = video.read()
